@@ -7,6 +7,7 @@ const outpassRoutes = require("./routers/outpassRoutes")
 const qrRoutes = require("./routers/qrRoutes")
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware") 
 const cors= require("cors");
+const path = require("path");
 
 dotenv.config();
 connectDB()
