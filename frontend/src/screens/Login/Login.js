@@ -41,15 +41,6 @@ const LoginScreen = ({ history }) => {
     }
   }, [error]);
 
-
-  // if (loading) {
-  //   return (
-  //     <div className="loading-screen">
-  //       <h3>Loading...</h3>
-  //     </div>
-  //   );
-  // }
-
   return (
     <div className="entry-page">
       <form onSubmit={submitHandler}>

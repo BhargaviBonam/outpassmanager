@@ -10,6 +10,5 @@ const router = express.Router();
 router.route("/").get(scanQR);
 router.route("/:id/").put(registerEntry);
 router.route("/entries").get(entries);
-// router.route("/:outpassId").post(registerEntry);
 
 module.exports = router;
