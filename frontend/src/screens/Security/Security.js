@@ -29,7 +29,7 @@ const Security = () => {
 
   const logoutHandler = () => {
     dispatch(logout());
-    navigate("/login");
+    navigate("/");
   };
   
   const navigate = useNavigate();

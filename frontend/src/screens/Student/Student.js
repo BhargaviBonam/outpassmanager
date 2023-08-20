@@ -29,7 +29,7 @@ const Student = ({ search }) => {
 
   const logoutHandler = () => {
     dispatch(logout());
-    navigate("/login");
+    navigate("/");
   };
 
   const navigate = useNavigate();

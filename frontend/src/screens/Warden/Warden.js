@@ -21,7 +21,7 @@ const Warden = () => {
 
   const logoutHandler = () => {
     dispatch(logout());
-    navigate("/login")
+    navigate("/")
   };
 
 

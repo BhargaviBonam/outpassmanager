@@ -30,7 +30,7 @@ const Navbar = ({ role, homeLink }) => {
   const logoutHandler = () => {
     dispatch(logout());
     localStorage.clear();
-    navigate("/login");
+    navigate("/");
   };
 
   return (

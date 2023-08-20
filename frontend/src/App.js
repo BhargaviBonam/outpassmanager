@@ -20,7 +20,7 @@ function App() {
         <Suspense fallback={<div></div>}>
           <Routes>
             <Route path="/" element={<Login />} exact />
-            <Route path="/login" element={<Login />} exact />
+            {/* <Route path="/login" element={<Login />} exact /> */}
             <Route path="/faculty" element={<Faculty />} exact />
             <Route path="/warden" element={<Warden />} exact />
             <Route path="/student" element={<Student />} exact />
