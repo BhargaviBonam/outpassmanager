@@ -14,7 +14,7 @@ const QrScanner = () => {
       const qrCode = data.text;
       try {
         const response = await axios.get(
-          `/api/qr/?qrCode=${qrCode}`,
+          `https://ssn-oms-backend.onrender.com/api/qr/?qrCode=${qrCode}`,
           {
             code: data,
           }

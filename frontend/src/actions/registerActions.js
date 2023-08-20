@@ -27,7 +27,7 @@ export const listRegister = (objectId) => async (dispatch, getState) => {
 
     // console.log("outpass Action student ID : ",studentId);
     const { data } = await axios.get(
-      `/api/qr/entries`,
+      `https://ssn-oms-backend.onrender.com/api/qr/entries`,
       config
     );
 

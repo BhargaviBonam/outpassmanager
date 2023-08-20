@@ -10,7 +10,7 @@ const List = (props) => {
     // fetch notes which is from backend 
     const fetchData = async () => {
         // putting { } around data variable means we are destructuring it to get the exact data 
-        const { data } = await axios.get("/api/data");
+        const { data } = await axios.get("https://ssn-oms-backend.onrender.com/api/data");
         setdata(data);
     }
     // useeffect is used to get the notes data after page is rendered 

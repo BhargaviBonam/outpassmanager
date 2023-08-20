@@ -29,7 +29,7 @@ export const listOutpassStudent = (objectId) => async (dispatch, getState) => {
         };
 
         // console.log("outpass Action student ID : ",studentId);
-        const { data } = await axios.get(`/api/outpass?objectId=${objectId}`,config); 
+        const { data } = await axios.get(`https://ssn-oms-backend.onrender.com/api/outpass?objectId=${objectId}`,config); 
 
        
 
@@ -67,7 +67,7 @@ export const listOutpassFaculty = (objectId) => async (dispatch, getState) => {
             },
         };
 
-        const { data } = await axios.get(`/api/outpass/faculty?objectId=${objectId}`, config); 
+        const { data } = await axios.get(`https://ssn-oms-backend.onrender.com/api/outpass/faculty?objectId=${objectId}`, config); 
 
         // console.log(data);
 
@@ -104,7 +104,7 @@ export const listOutpassWarden = (objectId) => async (dispatch, getState) => {
             },
         };
 
-        const { data } = await axios.get(`/api/outpass/warden?objectId=${objectId}`, config); 
+        const { data } = await axios.get(`https://ssn-oms-backend.onrender.com/api/outpass/warden?objectId=${objectId}`, config); 
 
         console.log("data:",data);
 
@@ -141,7 +141,7 @@ export const listOutpassSecurity = (qrCode) => async (dispatch, getState) => {
             },
         };
 
-        const { data } = await axios.get(`/api/qr/?qrCode=${qrCode}`, config); 
+        const { data } = await axios.get(`https://ssn-oms-backend.onrender.com/api/qr/?qrCode=${qrCode}`, config); 
 
         console.log("data:",data);
 
@@ -185,7 +185,7 @@ export const createOutpassAction = (studentId,from, to, reason, place) => async 
 
         console.log(userInfo);
         const { data } = await axios.post(
-            `/api/outpass`,
+            `https://ssn-oms-backend.onrender.com/api/outpass`,
             { studentId, from, to, reason, place },
             config
         );

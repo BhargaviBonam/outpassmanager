@@ -39,8 +39,8 @@ export default function Outpass({
     try {
       const response = await axios.put(
         security
-          ? `/api/qr/${id}`
-          : `/api/outpass/${id}/approve`,
+          ? `https://ssn-oms-backend.onrender.com/api/qr/${id}`
+          : `https://ssn-oms-backend.onrender.com/api/outpass/${id}/approve`,
         id
       );
       console.log(response.data);
@@ -57,7 +57,7 @@ export default function Outpass({
     if (!security) {
       try {
         const response = await axios.put(
-          `/api/outpass/${id}/reject`
+          `https://ssn-oms-backend.onrender.com/api/outpass/${id}/reject`
         );
         console.log(response.data);
         setClicked(true); // update state to show Outpass component has been approved
