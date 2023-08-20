@@ -1,6 +1,6 @@
 ﻿# Outpass-Management-System
 
-add content
+The MERN-based Outpass Management System is a website that helps colleges handle outpass requests better. It replaces paperwork by letting students, staff, and administrators easily ask for, check, and control outpasses online. This makes things faster for both the people in charge and the students, making things run smoother in the college.
 
 ## Getting Started
 
