@@ -44,7 +44,7 @@ export default function ViewHistory() {
   let filteredOutpasses = [];
   let filteredRegisters = [];
   let DisplayData = null;
-  if (outpasses) {
+  if (outpasses && outpasses.length) {
     filteredOutpasses = outpasses.filter((outpass) => {
       return (
         outpass.classInchargeId.toLowerCase().includes(search.toLowerCase()) ||
@@ -122,23 +122,23 @@ export default function ViewHistory() {
           userInfo.id[0] === "S"
             ? "student"
             : userInfo.id[0] === "F"
-            ? "faculty"
-            : userInfo.id[0] === "W"
-            ? "warden"
-            : userInfo.id[0] === "G"
-            ? "security"
-            : ""
+              ? "faculty"
+              : userInfo.id[0] === "W"
+                ? "warden"
+                : userInfo.id[0] === "G"
+                  ? "security"
+                  : ""
         }
         homeLink={
           userInfo.id[0] === "S"
             ? "/student"
             : userInfo.id[0] === "F"
-            ? "/faculty"
-            : userInfo.id[0] === "W"
-            ? "/warden"
-            : userInfo.id[0] === "G"
-            ? "/security"
-            : ""
+              ? "/faculty"
+              : userInfo.id[0] === "W"
+                ? "/warden"
+                : userInfo.id[0] === "G"
+                  ? "/security"
+                  : ""
         }
       />
 
