@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
       {/* <Header /> */}
       <main className="App">
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<div></div>}>
           <Routes>
             <Route path="/" element={<Login />} exact />
             <Route path="/login" element={<Login />} exact />
