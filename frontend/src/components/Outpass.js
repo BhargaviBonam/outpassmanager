@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Outpass.css";
 import axios from "axios";
 import QRCodeDisplay from "./QRCodeDisplay";
-import { colors } from "@mui/material";
 
 export default function Outpass({
   student,
@@ -74,21 +73,20 @@ export default function Outpass({
 
   return (
     <div
-      className={`outpasscontainer ${
-        status === "REJECTED"
+      className={`outpasscontainer ${status === "REJECTED"
           ? "rejected"
           : status === "APPROVED"
-          ? "approved"
-          : status === "REQUESTED1"
-          ? "requested"
-          : status === "INACTIVE"
-          ? "inactive"
-          : status === "EXPIRED"
-          ? "expired"
-          : status === "ACTIVE"
-          ? "active"
-          : ""
-      }`}
+            ? "approved"
+            : status === "REQUESTED1"
+              ? "requested"
+              : status === "INACTIVE"
+                ? "inactive"
+                : status === "EXPIRED"
+                  ? "expired"
+                  : status === "ACTIVE"
+                    ? "active"
+                    : ""
+        }`}
     >
       <div className="outpasscontainer-row">
         <div className="outpasscontainer-item">
@@ -171,7 +169,7 @@ export default function Outpass({
           </div>
         </div>
       </div>
-      
+
       {showQR && (
         <QRCodeDisplay text={qrCode} handleOverlayClick={handleOverlayClick} />
       )}

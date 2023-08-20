@@ -1,36 +1,36 @@
 import "./App.css";
-import Faculty from "./screens/Faculty/Faculty";
-import Warden from "./screens/Warden/Warden";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React from "react";
-import Searchresults from "./screens/Searchresult/Searchresults";
-import Student from "./screens/Student/Student";
-import Apply from "./screens/Apply/Apply";
-import QrScanner from "./components/QrScanner";
+import React, { Suspense, lazy } from 'react';
 
-import Login from "./screens/Login/Login";
-import Security from "./screens/Security/Security";
-import ViewHistory from "./components/Viewhistory";
-
-
+const Searchresults = lazy(() => import('./screens/Searchresult/Searchresults'));
+const Student = lazy(() => import('./screens/Student/Student'));
+const Apply = lazy(() => import('./screens/Apply/Apply'));
+const Faculty = lazy(() => import('./screens/Faculty/Faculty'));
+const Warden = lazy(() => import('./screens/Warden/Warden'));
+const QrScanner = lazy(() => import('./components/QrScanner'));
+const Login = lazy(() => import('./screens/Login/Login'));
+const Security = lazy(() => import('./screens/Security/Security'));
+const ViewHistory = lazy(() => import('./components/Viewhistory'));
 
 function App() {
   return (
     <BrowserRouter>
       {/* <Header /> */}
       <main className="App">
-        <Routes>
-          <Route path="/" element={<Login />} exact />
-          <Route path="/login" element={<Login />} exact />
-          <Route path="/faculty" element={<Faculty />} exact />
-          <Route path="/warden" element={<Warden />} exact />
-          <Route path="/student" element={<Student />} exact />
-          <Route path="/security" element={<Security />} exact />
-          <Route path="/searchresult" element={<Searchresults />} exact />
-          <Route path="/apply" element={<Apply />} exact />
-          <Route path="/qrscan" element={<QrScanner />} exact />
-          <Route path="/history" element={<ViewHistory />} exact />
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Login />} exact />
+            <Route path="/login" element={<Login />} exact />
+            <Route path="/faculty" element={<Faculty />} exact />
+            <Route path="/warden" element={<Warden />} exact />
+            <Route path="/student" element={<Student />} exact />
+            <Route path="/security" element={<Security />} exact />
+            <Route path="/searchresult" element={<Searchresults />} exact />
+            <Route path="/apply" element={<Apply />} exact />
+            <Route path="/qrscan" element={<QrScanner />} exact />
+            <Route path="/history" element={<ViewHistory />} exact />
+          </Routes>
+        </Suspense>
       </main>
       {/* <Footer /> */}
     </BrowserRouter>

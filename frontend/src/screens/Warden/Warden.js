@@ -1,11 +1,8 @@
 
-import React, { useEffect, useRef, useState } from 'react';
-import { Accordion, Button, Badge } from "react-bootstrap";
+import React, { useEffect, useState } from 'react';
 import Outpass from '../../components/Outpass'
-import Header from '../../components/Header'
-import { Link, useNavigate, useParams } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import Mainscreen from "../../components/Mainscreen";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { listOutpassWarden } from "../../actions/outpassActions";
 import { logout } from "../../actions/userActions"

@@ -1,7 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
 import TextField from "@mui/material/TextField";
-// import Outpass from '../../components/Outpass';
 import axios from 'axios';
 import List from './List';
 

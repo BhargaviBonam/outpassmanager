@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import MainScreen from "../../components/Mainscreen";
-import { Button, Card, Form } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { createOutpassAction } from "../../actions/outpassActions";
 import { useNavigate } from "react-router-dom";
 import "./apply.css";
 import Navbar from "../../components/Navbar";
 
-function Apply({ history, role }) {
+function Apply() {
   const [fromtime, setFromtime] = useState("");
   const [totime, setTotime] = useState("");
   const [place, setPlace] = useState("");
