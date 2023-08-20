@@ -2,6 +2,9 @@
 
 The MERN-based Outpass Management System is a website that helps colleges handle outpass requests better. It replaces paperwork by letting students, staff, and administrators easily ask for, check, and control outpasses online. This makes things faster for both the people in charge and the students, making things run smoother in the college.
 
+Currently, getting an outpass is a time-consuming and difficult process. For the girls' hostel, the process also takes a long
+time by hand. To make the process simpler, we have digitalized it. We have developed a website where students can apply for the same using their digital ID. Thus, they can connect with the appropriate staff without having to go there physically. Additionally, this makes it simpler for every staff who is approving the outpass.
+
 ## Getting Started
 
 1) Clone the repository to your local machine using git clone<br>
