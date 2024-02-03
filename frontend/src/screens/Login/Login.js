@@ -20,6 +20,7 @@ const LoginScreen = ({ history }) => {
       if (userInfo.id[0] === "S") navigate("/student");
       else if (userInfo.id[0] === "F") navigate("/faculty");
       else if (userInfo.id[0] === "W") navigate("/warden");
+      else if (userInfo.id[0] === "A") navigate("/admin");
       else navigate("/security");
     }
   }, [history, userInfo, navigate]);
