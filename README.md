@@ -13,3 +13,4 @@ time by hand. To make the process simpler, we have digitalized it. We have devel
 4) Configure the MongoDB connection string in the backend to connect to your local or remote MongoDB database.<br>
 5) Run the whole application using ```npm run dev``` in the root directory<br>
 6) The application should now be accessible at http://localhost:3000 in your web browser
+# outpassmanager
